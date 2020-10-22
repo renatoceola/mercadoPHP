@@ -27,6 +27,7 @@ include_once 'includes/message.php';
                             <th>Código:</th>
                             <th>Descrição:</th>
                             <th>Preço:</th>
+                            <th>Adicionar a lista:</th>
                         </tr>
                     </thead>
 
@@ -58,6 +59,7 @@ include_once 'includes/message.php';
             </div>
             </table>
         </form>
+        <div class="divider"><span></span><div class="divider"><span></span></div><span></span></div>
         <form action="php_action/buy.php" method="POST">
             <h4>Lista Compras</h4>
             <table class="striped">
@@ -71,7 +73,6 @@ include_once 'includes/message.php';
 
                 <tbody>
                     <?php
-
                     $sql = "SELECT * FROM item where documento = $venda";
                     $resultado = mysqli_query($connect, $sql);
                     $valor_total = 0;
